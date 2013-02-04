@@ -28,3 +28,5 @@ class Py2to3Command(sublime_plugin.TextCommand):
             window.active_view().insert(edit, 0, out.decode("utf-8"))
             # change syntax to diff
             window.active_view().set_syntax_file('Packages/Diff/Diff.tmLanguage')
+        else:
+            sublime.status_message("Py2to3: No changes conducted")
